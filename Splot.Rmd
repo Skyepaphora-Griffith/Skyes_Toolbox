@@ -1,0 +1,87 @@
+# Splot
+
+
+
+
+
+
+```{r}
+## --- Custom Plots/Graphics------------------------------------ ##
+
+# --- My colours --- #
+skol <-  list(red = "#EF8085", orange = "#ee9946", yellow = "#FCD779",
+            green = "#B3C99D",   blue = "#9DBACA", purple = "#B29CC9",
+           brown1 = "#EFEBE6", brown2 = "#DFD6CD", brown3 = "#896f58",
+           brown4 = "#544536",  cream = "#F7F3F3",   salt = "#FBFAF9")
+
+# --- Rectangle --- #
+rekt <- function(col = "#FEFAFA", log = FALSE){
+  if(log == FALSE){
+      rect(par("usr")[1], par("usr")[3], par("usr")[2], par("usr")[4], col = col)
+  } else if(log == "x"){
+      rect(10^par("usr")[1], par("usr")[3], 10^par("usr")[2], par("usr")[4], col = col)
+  } else if(log == "y"){
+      rect(par("usr")[1], 10^par("usr")[3], par("usr")[2], 10^par("usr")[4], col = col)
+  } else if (log == "xy"){
+      rect(10^par("usr")[1], 10^par("usr")[3], 10^par("usr")[2], 10^par("usr")[4], col = col)
+  }
+}
+
+# --- box around plot --- #
+sox <- function(){
+  abline(v = c(par("usr")[1], par("usr")[2]),
+         h = c(par("usr")[3], par("usr")[4])) }
+
+# --- orientation lines --- #
+skor <- function(x, y, n1 = 11, n2 = 9, col = "white"){
+  abline(v = seq(min(x), max(x), length.out = n1), col = col, lwd = 2)
+  abline(h = seq(min(y), max(y), length.out = n2), col = col, lwd = 2)
+  sox()
+}
+
+# --- Label Function --- # NORMALLY 1.7 is actually 1.5!!!!!!!!!!!!!!!!!!!
+slab <- function(main = "", subb = "", xlab = "", ylab = ""){
+  if(subb == ""){mtext(main, 3, 1,  font = 2, cex = 1.1 )} else {mtext(main, 3, 1.75,  font = 2, cex = 1.1 )}
+  mtext(subb, 3, 0.28,           cex = 1   )
+  mtext(xlab, 1, 2.75, font = 1, cex = 1.05)
+  mtext(ylab, 2, 3.5, font = 1, cex = 1.05)
+}
+
+# --- Colour Boundaries --- ##
+rext <- function(N=1000,B=100){rect(
+     xleft = c(par("usr")[[1]],N-ceiling(B/2)),
+     ybottom = c(par("usr")[[3]], par("usr")[[3]]),
+     xright = c(ceiling(B/2), par("usr")[[2]]),
+     ytop = c(par("usr")[[4]], par("usr")[[4]]),
+     col = skol$cream, border = NA)}
+
+# --- Plot function --- #
+splot <- function(x, y,
+                  col  = skol$brown4,
+                  main = "", subb = "", xlab = "", ylab = "",
+                  type = "p",
+                  pch  = 19,
+                  colr = "#F0F0F0", 
+                  rexs = FALSE, bord = 100,
+                  n1 = 11, n2 = 9, skorcol = "white",
+                  labs = FALSE, las = 1, ...){
+  # frame
+  plot(x, y, xlab = "", ylab = "", las = las, ...)
+  # bg colours
+  rekt(colr); if(rexs){
+    rext(length(x),bord)
+    abline(v = c(ceiling(B/2),N-ceiling(B/2)), col = skol$green, lty = 2)
+    abline(v=c(par("usr")[1]),#par("usr")[3]),
+           h=par("usr")[4]) 
+  }
+  # orient
+  skor(x, y, n1, n2, skorcol)
+  # add
+  if(type == "p"){points(x, y, col = col, pch = pch, ...)
+  } else {
+    lines(x, y, col = col, type = type, ...)
+  }
+  # Labels
+  if(labs){slab(main,subb,xlab = substitute(x),ylab = substitute(y))} else {slab(main,subb,xlab,ylab)}
+}
+```

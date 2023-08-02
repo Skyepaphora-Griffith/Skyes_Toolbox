@@ -1,0 +1,53 @@
+# Colour Scheme 1 
+
+### Pastels 
+
+**HOT:**  (lum=75, sat=75-95)
+
+**COLD:** (lum=70, sat=30)
+
+```{r}
+skastel <- list(red = "EF8F8F",
+                yellow = "FCDE83",
+                green = "B3C99C",
+                blue = "9CBAC9",
+                purple = "B29CC9")
+```
+
+### Saturated
+
+```{r}
+skaturate <- list(red  = "FF6666",
+                yellow = "FFD966",
+                green  = "8FCC52",
+                blue   = "45B0E6",
+                purple = "A15CE6")
+```
+
+### Nudes
+
+(Hue=33, Sat=22)
+
+Lowercase "B" for light browns (background colours, subtle shading, etc.)
+
+Uppercase "B" for dark browns (text, plot features, etc.)
+
+```{r}
+skrown <- list(salt = "#FBFAF9",
+              smoke = "F7F5F3",
+              b1 = "EFEBE6",
+              b2 = "DFD7CD",
+              B1 = "897358",
+              B2 = "574938")
+```
+
+
+
+# Colour Scheme 2 (old)
+
+```{r}
+skol <-  list(red = "#EF8085", orange = "#ee9946", yellow = "#FCD779",
+            green = "#B3C99D",   blue = "#9DBACA", purple = "#B29CC9",
+           brown1 = "#EFEBE6", brown2 = "#DFD6CD", brown3 = "#896f58",
+           brown4 = "#544536",  cream = "#F7F3F3",   salt = "#FBFAF9")
+```

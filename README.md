@@ -12,7 +12,30 @@
 |:------------|:------------|:------------|:------------|:------------|
 | `#EF8F8F`![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) | `"#FCDE83"`![#FCDE83](https://placehold.co/15x15/FCDE83/FCDE83.png) | `"#B3C99C"`![#B3C99C](https://placehold.co/15x15/B3C99C/B3C99C.png) | `"#9CBAC9"`![#9CBAC9](https://placehold.co/15x15/9CBAC9/9CBAC9.png) | `"#B29CC9"`![#B29CC9](https://placehold.co/15x15/B29CC9/B29CC9.png) |
 
+### *Skaturate:* saturated version of skastels
+
+| red         | yellow      | green       | blue        | purple      |
+|:------------|:------------|:------------|:------------|:------------|
+| `#FF6666`![#FF6666](https://placehold.co/15x15/FF6666/FF6666.png) | `"#FFD966"`![#FFD966](https://placehold.co/15x15/FFD966/FFD966.png) | `"#8FCC52"`![#8FCC52](https://placehold.co/15x15/8FCC52/8FCC52.png) | `"#45B0E6"`![#45B0E6](https://placehold.co/15x15/45B0E6/45B0E6.png) | `"#A15CE6"`![#A15CE6](https://placehold.co/15x15/A15CE6/A15CE6.png) |
+
+#### Skrown: Nudes and Earthy Shades
+
+(Hue=33, Sat=22)
+
+* Lowercase "B" for light browns (background colours, subtle shading, etc.)
+* Uppercase "B" for dark browns (text, plot features, etc.)
+
+| Salt        | Smoke       | b1          | b2          | B1          | B2          |
+|:------------|:------------|:------------|:------------|:------------|:------------|
+| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | 
+`"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | 
+`"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | 
+`"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | 
+`"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) |
+`"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) |
+
 ---
+
 
 # Prelim Functions
 

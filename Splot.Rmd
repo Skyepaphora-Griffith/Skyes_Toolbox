@@ -1,18 +1,50 @@
-# Splot
+---
+output: html_document
+---
+
+# Prelim Functions
+
+## rekt
+**Description:** Creates rectangle over plot region (acts as background colour)
+
+**Parameters:** col (colour); log (warps rectangle to fit logarithmic axes)
+
+**Notes:** Overlays current plot - you will have to replot the data unless rekt() is embedded in splot()
 
 
+## sox
+**Description:** Redraws border around plot region
+
+**Parameters:** N/A
+
+**Notes:** Useful for image plots
 
 
+## skor
+**Description:** Draws faint grid beneath the data: orientation lines similar to ggplot
+
+**Parameters:** {x,y} (indep/dep variables: determines range); {n1,n2} (number of lines along x/y); col (colour)
+
+**BUGS:** Skye, consider changing x/y to xlim/ylim somehow. Not currently flexible if user changes lims. 
 
 
-```{r}
-## --- Custom Plots/Graphics------------------------------------ ##
+## slab
+**Description:** Adds Skye-designed labels to existing plot
 
-# --- My colours --- #
-skol <-  list(red = "#EF8085", orange = "#ee9946", yellow = "#FCD779",
-            green = "#B3C99D",   blue = "#9DBACA", purple = "#B29CC9",
-           brown1 = "#EFEBE6", brown2 = "#DFD6CD", brown3 = "#896f58",
-           brown4 = "#544536",  cream = "#F7F3F3",   salt = "#FBFAF9")
+**Parameters:** main (title); subb (subtitle); xlab (x axis label [duh]), ylab (y axis label)
+
+**Notes:** Height ("line") of main title is dependent on whether a subtitle exists.
+
+
+## rexs
+**Description:** Draws a symmetrical pillarbox background
+
+**Parameters:** N (length of x vector); B (combined width of pillars); col (colour)
+
+**Notes:** Designed specifically to highlight boundary regions omitted by sliding window estimates
+
+
+```{r prelim}
 
 # --- Rectangle --- #
 rekt <- function(col = "#FEFAFA", log = FALSE){
@@ -47,26 +79,52 @@ slab <- function(main = "", subb = "", xlab = "", ylab = ""){
   mtext(ylab, 2, 3.5, font = 1, cex = 1.05)
 }
 
-# --- Colour Boundaries --- ##
-rext <- function(N=1000,B=100){rect(
+# --- Pillarbox Boundaries --- ##
+rext <- function(N=1000,B=100, col = skol$cream){rect(
      xleft = c(par("usr")[[1]],N-ceiling(B/2)),
      ybottom = c(par("usr")[[3]], par("usr")[[3]]),
      xright = c(ceiling(B/2), par("usr")[[2]]),
      ytop = c(par("usr")[[4]], par("usr")[[4]]),
-     col = skol$cream, border = NA)}
+     col = col, border = NA)}
+```
 
-# --- Plot function --- #
+# Splot: Skye-Plots
+
+| Parameter | Description                                                                                                     |
+|:----------|:----------------------------------------------------------------------------------------------------------------|
+| x, y      | Independent and dependent variables to plot, respectively                                                       |
+| col       | Data will be plotted in this colour                                                                             |
+| main, subb, xlab, ylab | title, subtitle, and axis labels. Title height dependent on existence of subtitle.                 |
+| type      | plot type (lines, points, heights, connect-the-dots, etc.)                                                      |
+| pch       | point character                                                                                                 |
+| colr      | background colour for plot region (to be drawn by rekt())                                                       |
+| rexs      | Indicates whether to draw pillarbox                                                                             |
+| bord      | combined width of pillars if rexs=TRUE                                                                          |
+| skor      | Indicates whether to draw grid of orientation lines (similar to ggplot)                                         |
+| n1,n2     | numbers of vertical and horizontal orientation lines if skor=TRUE                                               |
+| skorcol   | colour of orientation lines if skor=TRUE                                                                        |
+| labs      | Indicates whether x and y labels should be automatically produced according to variable names via substitute()  |
+| las       | defines how axis tick labels are oriented (default is upright for both axes)                                    |
+| ...       | other graphical parameters                                                                                      |
+
+## Skye's wishlist to herself
+
+* make plot features (axis, ticks, titles, etc.) the same colour as **col**
+* fix **skor** stuff
+
+```{r}
+# --- Skye-Plot function --- #
 splot <- function(x, y,
                   col  = skol$brown4,
                   main = "", subb = "", xlab = "", ylab = "",
-                  type = "p",
-                  pch  = 19,
+                  type = "p", pch = 19,
                   colr = "#F0F0F0", 
                   rexs = FALSE, bord = 100,
-                  n1 = 11, n2 = 9, skorcol = "white",
+                  skor = TRUE, n1 = 11, n2 = 9, skorcol = "white",
                   labs = FALSE, las = 1, ...){
   # frame
-  plot(x, y, xlab = "", ylab = "", las = las, ...)
+  plot(x, y, xlab = "", ylab = "", las = las, ...); gc()
+  
   # bg colours
   rekt(colr); if(rexs){
     rext(length(x),bord)
@@ -74,14 +132,27 @@ splot <- function(x, y,
     abline(v=c(par("usr")[1]),#par("usr")[3]),
            h=par("usr")[4]) 
   }
+  
   # orient
-  skor(x, y, n1, n2, skorcol)
+  if(skor)(skor(x, y, n1, n2, skorcol))
+  
   # add
   if(type == "p"){points(x, y, col = col, pch = pch, ...)
   } else {
     lines(x, y, col = col, type = type, ...)
   }
+  
   # Labels
-  if(labs){slab(main,subb,xlab = substitute(x),ylab = substitute(y))} else {slab(main,subb,xlab,ylab)}
+  if(labs){slab(main,subb,xlab = substitute(x),ylab = substitute(y))} else {slab(main,subb,xlab,ylab)}; gc()
 }
 ```
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,15 @@
-# Colour Scheme 1 
+## Colour Scheme 1 
 
-### Pastels 
+#### Skastels: 
+pastels 
 
 **HOT:**  (lum=75, sat=75-95)
 
 **COLD:** (lum=70, sat=30)
+
+| red         | yellow      | green       | blue        | purple      |
+|:------------|:------------|:------------|:------------|:------------|
+| `"#EF8F8F"` | `"#FCDE83"` | `"#B3C99C"` | `"#9CBAC9"` | `"#B29CC9"` |
 
 ```{r}
 skastel <- list(red = "EF8F8F",
@@ -14,7 +19,8 @@ skastel <- list(red = "EF8F8F",
                 purple = "B29CC9")
 ```
 
-### Saturated
+#### Skaturate: 
+saturated version of skastels
 
 ```{r}
 skaturate <- list(red  = "FF6666",
@@ -24,13 +30,13 @@ skaturate <- list(red  = "FF6666",
                 purple = "A15CE6")
 ```
 
-### Nudes
+#### Skrown:
+Nudes and earthy shades
 
 (Hue=33, Sat=22)
 
-Lowercase "B" for light browns (background colours, subtle shading, etc.)
-
-Uppercase "B" for dark browns (text, plot features, etc.)
+* Lowercase "B" for light browns (background colours, subtle shading, etc.)
+* Uppercase "B" for dark browns (text, plot features, etc.)
 
 ```{r}
 skrown <- list(salt = "#FBFAF9",

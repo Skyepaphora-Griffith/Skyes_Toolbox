@@ -2,8 +2,7 @@
 
 ## Colour Scheme 1 
 
-#### Skastels: 
-pastels 
+### Skastels: pastels
 
 **HOT:**  (lum=75, sat=75-95)
 
@@ -11,7 +10,7 @@ pastels
 
 | red         | yellow      | green       | blue        | purple      |
 |:------------|:------------|:------------|:------------|:------------|
-| `"#EF8F8F"` | `"#FCDE83"` | `"#B3C99C"` | `"#9CBAC9"` | `"#B29CC9"` |
+| `"#EF8F8F"` ![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) `#EF8F8F`| `"#FCDE83"` | `"#B3C99C"` | `"#9CBAC9"` | `"#B29CC9"` |
 
 ---
 

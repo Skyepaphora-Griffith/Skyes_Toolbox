@@ -10,7 +10,7 @@
 
 | red         | yellow      | green       | blue        | purple      |
 |:------------|:------------|:------------|:------------|:------------|
-| `"#EF8F8F"` ![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) `#EF8F8F`| `"#FCDE83"` | `"#B3C99C"` | `"#9CBAC9"` | `"#B29CC9"` |
+| `#EF8F8F`![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) | `"#FCDE83"`![#FCDE83](https://placehold.co/15x15/FCDE83/FCDE83.png) | `"#B3C99C"`![#B3C99C](https://placehold.co/15x15/B3C99C/B3C99C.png) | `"#9CBAC9"`![#9CBAC9](https://placehold.co/15x15/9CBAC9/9CBAC9.png) | `"#B29CC9"`![#B29CC9](https://placehold.co/15x15/B29CC9/B29CC9.png) |
 
 ---
 

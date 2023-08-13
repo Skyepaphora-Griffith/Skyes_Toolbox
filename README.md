@@ -87,7 +87,7 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 |:-----------------|:---------------------------------------------------------------|
 | **Description:** | Draws a symmetrical pillarbox background |
 | **Parameters:**  | N (length of x vector); B (combined width of pillars); col (colour) |
-| **Notes:**       | Designed specifically to highlight boundary regions omitted by sliding window estimates |
+| **Notes:**       | Designed specifically to highlight boundary regions omitted by sliding window spectrograms |
 
 ---
 

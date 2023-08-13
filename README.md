@@ -8,6 +8,11 @@ But do you want to use these tools too? Cool! I'll try to develop them for the m
 #### Notes
 This toolbox is *entirely independent* of ggplot. If you're a ggplotter, leave. I respect you. But this toolbox is made from sticks and stones, not actual legitimate hardware from the store. I *want* splintered, blistery hands. So, if you want to shred some skin with me, you'll have to take off the gg-gloves. 
 
+#### Skye's wishlist to herself
+
+* legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?
+* add argument for adjustment of **ylab** in slab() and splot().
+
 ---
 
 # Spalette
@@ -44,8 +49,9 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 
 ---
 
+# Splot: Skye-Plots
 
-# Prelim Splot Functions
+## Preliminary Functions Required by Splot()
 
 ### rekt
 
@@ -91,7 +97,7 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 
 ---
 
-# Splot: Skye-Plots
+## Splot() function
 
 | Parameter | Description                                                                                                     |
 |:----------|:----------------------------------------------------------------------------------------------------------------|
@@ -109,10 +115,6 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 | las       | defines how axis tick labels are oriented (default is upright for both axes)                                    |
 | ...       | other graphical parameters                                                                                      |
 
-
 ---
 
-## Skye's wishlist to herself
 
-* legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?
-* add argument for adjustment of **ylab** in slab() and splot().

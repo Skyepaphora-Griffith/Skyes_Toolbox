@@ -12,6 +12,7 @@ This toolbox is *entirely independent* of ggplot. If you're a ggplotter, leave. 
 
 * legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?
 * add argument for adjustment of **ylab** in slab() and splot().
+* give default parameter values in Splot() table at the end of this README
 
 ---
 

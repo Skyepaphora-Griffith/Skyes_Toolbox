@@ -32,7 +32,7 @@
 ---
 
 
-# Prelim Functions
+# Prelim Splot Functions
 
 ## rekt
 **Description:** Creates rectangle over plot region (acts as background colour)
@@ -72,6 +72,8 @@
 **Parameters:** N (length of x vector); B (combined width of pillars); col (colour)
 
 **Notes:** Designed specifically to highlight boundary regions omitted by sliding window estimates
+
+---
 
 
 

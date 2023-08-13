@@ -2,6 +2,11 @@
 output: html_document
 ---
 
+```{r}
+# Load Palette
+load(file = "C:/Users/skyep/Documents/Research/Plot_Animations/spalette.RData")
+```
+
 # Prelim Functions
 
 ## rekt
@@ -65,14 +70,25 @@ sox <- function(){
          h = c(par("usr")[3], par("usr")[4])) }
 
 # --- orientation lines --- #
-skor <- function(x, y, n1 = 11, n2 = 9, col = "white"){
-  abline(v = seq(min(x), max(x), length.out = n1), col = col, lwd = 2)
-  abline(h = seq(min(y), max(y), length.out = n2), col = col, lwd = 2)
+skor <- function(x = 0, y = 0, xlim = NULL, ylim = NULL, n1 = 11, n2 = 9, col = "white"){
+  
+  if(is.null(xlim)) {
+    abline(v = seq(min(x), max(x), length.out = n1), col = col, lwd = 2)
+  } else {
+    abline(v = seq(xlim[1], xlim[2], length.out = n1), col = col, lwd = 2)
+  }
+  
+  if(is.null(ylim)) {
+    abline(h = seq(min(y), max(y), length.out = n2), col = col, lwd = 2)
+  } else {
+    abline(h = seq(ylim[1], ylim[2], length.out = n2), col = col, lwd = 2)
+  }
+  
   sox()
 }
 
 # --- Label Function --- # NORMALLY 1.7 is actually 1.5!!!!!!!!!!!!!!!!!!!
-slab <- function(main = "", subb = "", xlab = "", ylab = ""){
+slab <- function(main = "", subb = "", xlab = "", ylab = "", col = skrown$B2){
   if(subb == ""){mtext(main, 3, 1,  font = 2, cex = 1.1 )} else {mtext(main, 3, 1.75,  font = 2, cex = 1.1 )}
   mtext(subb, 3, 0.28,           cex = 1   )
   mtext(xlab, 1, 2.75, font = 1, cex = 1.05)
@@ -107,23 +123,20 @@ rext <- function(N=1000,B=100, col = skol$cream){rect(
 | las       | defines how axis tick labels are oriented (default is upright for both axes)                                    |
 | ...       | other graphical parameters                                                                                      |
 
-## Skye's wishlist to herself
-
-* make plot features (axis, ticks, titles, etc.) the same colour as **col**
-* fix **skor** stuff
-
 ```{r}
 # --- Skye-Plot function --- #
 splot <- function(x, y,
                   col  = skol$brown4,
                   main = "", subb = "", xlab = "", ylab = "",
                   type = "p", pch = 19,
-                  colr = "#F0F0F0", 
+                  colr = "#F0F0F0",
+                  xlim = NULL, ylim = NULL,
                   rexs = FALSE, bord = 100,
                   skor = TRUE, n1 = 11, n2 = 9, skorcol = "white",
                   labs = FALSE, las = 1, ...){
   # frame
-  plot(x, y, xlab = "", ylab = "", las = las, ...); gc()
+  plot(x, y, xlab = "", ylab = "", las = las,
+       xlim = xlim, ylim = ylim, ...)
   
   # bg colours
   rekt(colr); if(rexs){
@@ -134,7 +147,7 @@ splot <- function(x, y,
   }
   
   # orient
-  if(skor)(skor(x, y, n1, n2, skorcol))
+  if(skor)(skor(x, y, xlim, ylim, n1, n2, skorcol))
   
   # add
   if(type == "p"){points(x, y, col = col, pch = pch, ...)
@@ -143,10 +156,13 @@ splot <- function(x, y,
   }
   
   # Labels
-  if(labs){slab(main,subb,xlab = substitute(x),ylab = substitute(y))} else {slab(main,subb,xlab,ylab)}; gc()
+  if(labs){slab(main,subb,xlab = substitute(x),ylab = substitute(y))} else {slab(main,subb,xlab,ylab)}
 }
 ```
 
+## Skye's wishlist to herself
+
+* make plot features (axis, ticks, titles, etc.) the same colour as **col**
 
 
 
@@ -154,5 +170,6 @@ splot <- function(x, y,
 
 
 
-
-
+```{r}
+save.image("C:/Users/skyep/Documents/Research/Plot_Animations/splot.RData")   # General plot directory
+```

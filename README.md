@@ -1,43 +1,50 @@
 # Skye's Toolbox
 
 #### Intro
-Hi! Welcome to my toolbox. I really like making things from scratch, and I try to customise and automate the visual components of my work whenever I can. Why? Because I'm a disillusioned PhD student and the flame in my heart has been all but extinguished. I choke on the cloud of apathy which billows from the struggling bed of embers, and now blindly grasp at kindling on my hands and knees. So that's what this toolbox is, really.
+Hi! Welcome to my toolbox. I really like making things from scratch, and I try to customise the visual components of my work whenever I can. Why? Because I'm a disillusioned PhD student and the flame in my heart has been all but extinguished. I choke on the cloud of apathy which billows from the struggling bed of embers, and now blindly grasp at kindling on my hands and knees. So that's what this toolbox is, really.
 
-But do you want to use these tools too? Cool! I'll try to develop them for the most general user I can. If you play around with any functions I've written, feel free to send me critical feedback at *skye.griffith@queensu.ca*. I'd love to know what screw heads I'm missing. 
+But do you want to use these tools too? Cool! I'll try to develop them for the most general user I can. If you play around with any functions I've written, feel free to send me critical feedback at skye.griffith@queensu.ca. Attached scripts are encouraged. I'd love to know what screw heads I'm missing. 
 
 #### Notes
 This toolbox is *entirely independent* of ggplot. If you're a ggplotter, leave. I respect you. But this toolbox is made from sticks and stones, not actual legitimate hardware from the store. I *want* splintered, blistery hands. So, if you want to shred some skin with me, you'll have to take off the gg-gloves. 
+
+---
+
+===
+
+
 
 # Spalette
 
 The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/blob/main/Spalette.Rmd) contains 2 colour schemes, but the second mostly exists for my own archival purposes. The following sub-palettes belong to the *first* colour scheme only.
 
-### Skastels: pastels
+### *Skastels:* pastels
 
-**HOT:**  (lum=75, sat=75-95)
-
-**COLD:** (lum=70, sat=30)
-
-| red         | yellow      | green       | blue        | purple      |
-|:------------|:------------|:------------|:------------|:------------|
-| `#EF8F8F`![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) | `"#FCDE83"`![#FCDE83](https://placehold.co/15x15/FCDE83/FCDE83.png) | `"#B3C99C"`![#B3C99C](https://placehold.co/15x15/B3C99C/B3C99C.png) | `"#9CBAC9"`![#9CBAC9](https://placehold.co/15x15/9CBAC9/9CBAC9.png) | `"#B29CC9"`![#B29CC9](https://placehold.co/15x15/B29CC9/B29CC9.png) |
+>**HOT:**  (lum=75, sat=75-95)
+>
+>**COLD:** (lum=70, sat=30)
+>
+>| red         | yellow      | green       | blue        | purple      |
+>|:------------|:------------|:------------|:------------|:------------|
+>| `#EF8F8F`![#EF8F8F](https://placehold.co/15x15/EF8F8F/EF8F8F.png) | `"#FCDE83"`![#FCDE83](https://placehold.co/15x15/FCDE83/FCDE83.png) | `"#B3C99C"`![#B3C99C](https://placehold.co/15x15/B3C99C/B3C99C.png) | `"#9CBAC9"`![#9CBAC9](https://placehold.co/15x15/9CBAC9/9CBAC9.png) | `"#B29CC9"`![#B29CC9](https://placehold.co/15x15/B29CC9/B29CC9.png) |
 
 ### *Skaturate:* saturated version of skastels
 
-| red         | yellow      | green       | blue        | purple      |
-|:------------|:------------|:------------|:------------|:------------|
-| `#FF6666`![#FF6666](https://placehold.co/15x15/FF6666/FF6666.png) | `"#FFCC33"`![#FFCC33](https://placehold.co/15x15/FFCC33/FFCC33.png) | `"#8FCC52"`![#8FCC52](https://placehold.co/15x15/8FCC52/8FCC52.png) | `"#45B0E6"`![#45B0E6](https://placehold.co/15x15/45B0E6/45B0E6.png) | `"#A15CE6"`![#A15CE6](https://placehold.co/15x15/A15CE6/A15CE6.png) |
+>| red         | yellow      | green       | blue        | purple      |
+>|:------------|:------------|:------------|:------------|:------------|
+>| `#FF6666`![#FF6666](https://placehold.co/15x15/FF6666/FF6666.png) | `"#FFCC33"`![#FFCC33](https://placehold.co/15x15/FFCC33/FFCC33.png) | `"#8FCC52"`![#8FCC52](https://placehold.co/15x15/8FCC52/8FCC52.png) | `"#45B0E6"`![#45B0E6](https://placehold.co/15x15/45B0E6/45B0E6.png) | `"#A15CE6"`![#A15CE6](https://placehold.co/15x15/A15CE6/A15CE6.png) |
 
-### Skrown: Nudes and Earthy Shades
+### *Skrown:* Nudes and Earthy Shades
 
-(Hue=33, Sat=22)
-
-* Lowercase "B" for light browns (background colours, subtle shading, etc.)
-* Uppercase "B" for dark browns (text, plot features, etc.)
-
-| Salt        | Smoke       | b1          | b2          | B1          | B2          |
-|:------------|:------------|:------------|:------------|:------------|:------------|
-| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) |
+>(Hue=33, Sat=22)
+>
+>**"b"** for light browns (background colours, subtle shading, etc.)
+>
+>**"B"** for dark browns (text, plot features, etc.)
+>
+>| Salt        | Smoke       | b1          | b2          | B1          | B2          |
+>|:------------|:------------|:------------|:------------|:------------|:------------|
+>| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) |
 
 ---
 

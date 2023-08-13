@@ -1,4 +1,6 @@
-# Skye's Toolbox
+---
+title: Skye's Toolbox
+---
 
 #### Intro
 Hi! Welcome to my toolbox. I really like making things from scratch, and I try to customise the visual components of my work whenever I can. Why? Because I'm a disillusioned PhD student and the flame in my heart has been all but extinguished. I choke on the cloud of apathy which billows from the struggling bed of embers, and now blindly grasp at kindling on my hands and knees. So that's what this toolbox is, really.
@@ -22,7 +24,8 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 
 >(Hue=33, Sat=22)
 >
->**"b"** for light browns (background colours, subtle shading, etc.)  
+>**"b"** for light browns (background colours, subtle shading, etc.)
+>
 >**"B"** for dark browns (text, plot features, etc.)
 
 ### *Skastels:* pastels
@@ -35,7 +38,7 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 >
 >**COLD:** (lum=70, sat=30)
 
-### *Skaturate:* saturated version of skastels
+### **Skaturate:** saturated version of skastels
 
 | red         | yellow      | green       | blue        | purple      |
 |:------------|:------------|:------------|:------------|:------------|

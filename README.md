@@ -53,7 +53,7 @@
 ## skor
 **Description:** Draws faint grid beneath the data: orientation lines similar to ggplot
 
-**Parameters:** {x,y} (indep/dep variables: determines range); {n1,n2} (number of lines along x/y); col (colour)
+**Parameters:** {x,y} (indep/dep variables: determines range); {xlim, ylim} (optional, passed through if called for main plot); {n1,n2} (number of lines along x/y); col (colour)
 
 **BUGS:** Skye, consider changing x/y to xlim/ylim somehow. Not currently flexible if user changes lims. 
 
@@ -61,12 +61,12 @@
 ## slab
 **Description:** Adds Skye-designed labels to existing plot
 
-**Parameters:** main (title); subb (subtitle); xlab (x axis label [duh]), ylab (y axis label)
+**Parameters:** main (title); subb (subtitle); xlab (x axis label [duh]), ylab (y axis label); col (colour)
 
 **Notes:** Height ("line") of main title is dependent on whether a subtitle exists.
 
 
-## rexs
+## rexs (not currently implemented)
 **Description:** Draws a symmetrical pillarbox background
 
 **Parameters:** N (length of x vector); B (combined width of pillars); col (colour)
@@ -87,16 +87,18 @@
 | type      | plot type (lines, points, heights, connect-the-dots, etc.)                                                      |
 | pch       | point character                                                                                                 |
 | colr      | background colour for plot region (to be drawn by rekt())                                                       |
-| rexs      | Indicates whether to draw pillarbox                                                                             |
-| bord      | combined width of pillars if rexs=TRUE                                                                          |
 | skor      | Indicates whether to draw grid of orientation lines (similar to ggplot)                                         |
 | n1,n2     | numbers of vertical and horizontal orientation lines if skor=TRUE                                               |
 | skorcol   | colour of orientation lines if skor=TRUE                                                                        |
-| labs      | Indicates whether x and y labels should be automatically produced according to variable names via substitute()  |
+| log       | logarithmic axes (sends to main plot but also the rekt)                                                         |
+| labs      | should x and y labels be automatically produced via substitute()? OPT-IN rather than OPT-OUT                    |
 | las       | defines how axis tick labels are oriented (default is upright for both axes)                                    |
 | ...       | other graphical parameters                                                                                      |
 
+
+
+---
+
 ## Skye's wishlist to herself
 
-* make plot features (axis, ticks, titles, etc.) the same colour as **col**
-* fix **skor** stuff
+* legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?

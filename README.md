@@ -13,6 +13,8 @@ This toolbox is *entirely independent* of ggplot. If you're a ggplotter, leave. 
 * legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?
 * add argument for adjustment of **ylab** in slab() and splot().
 * give default parameter values in Splot() table at the end of this README
+* create a function for user to overwrite defaults (for example, if they want to change default background colour)
+* NOTE: `splot()` and `rekt()` are compatible with logarithmic axes, but `skor()` is not. Won't give an error, but grid will not be logarithmic. I like this, because it gives me a feeling for both scales, but generally this is not desired. Working on a solution currently.
 
 ---
 

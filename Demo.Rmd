@@ -1,0 +1,164 @@
+---
+output: html_document
+---
+
+# Examples of Use
+
+*Maybe put a lil table of contents here?*
+
+## Downloading
+
+1. Download [splot.RData](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/blob/main/splot.RData) to your current working directory.
+2. Load the data:
+
+```{r load}
+load("splot.RData")
+```
+
+Note: this file also includes *Spalette* colour schemes. To use the Spalette palette on its own, download [spalette.RData](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/blob/main/spalette.RData).
+
+---
+
+## Comparisons to Base Plots
+
+blablabla
+
+### Simple, Simple Plots: little to no customization
+
+**Basic 1:** y vector left NULL  
+**Basic 2:** x and y vectors given  
+
+```{r Basics, fig.dim = c(12,10)}
+# Setup
+par(mfrow= c(2,2))
+
+# Vectors to plot
+x <- 1:10
+y <- 10:1
+
+# --- Basic 1
+plot (x)
+splot(x)
+
+# --- Basic 2
+plot (x, y)
+splot(x, y)
+```
+
+| Maintained Attributes |
+|:----------------------|
+| spacing of data points, axis limits, etc. |
+| some axis naming conventions (see below)  |
+
+| Changes | Description         | How to Revert |
+|:--------|:--------------------|:--------------|
+| Foreground Colour  | Data points and axis labels are now `skrown$B2` (the darkest brown in Spalette). | `col = "black"` |
+| Point Character   | Points are now solid by default (`pch = 19`) | `pch = 1` |
+| Background Colour | the background of the plot window is now `skrown$smoke` | `colr = "white"` |
+| Orientation Lines | There are now gridlines for quick visual alignment of the data to each axis, similar to ggplot(). | `skor = FALSE` |
+| Tick Label Orientation | The y-axis tick labels are now upright, similar to ggplot(). | `las = 0` |
+| Axis Label Names  | By default, the name of each variable is given, *along with its de-parsed value.* | `labs = 0` or `labs = 1`|
+| Axis Label Spacing | x-axis label sits a bit higher, font a tiny bit bigger at `cex = 1.05"` | `xlab = ""` (add your own, manually.) |
+
+
+#### NOTES
+The default Splot background colour is roughly similar to the default *chunk* background colour knit by RMarkdown files, whether to pdf or html. (I don't use Word, sorry.) I find that this results in a nicer distribution of shading across the knitted document. I say "roughly similar" because it's more saturated, with a faint orange hue, as all grey-scales are in Skye's world.
+
+* For a subtler look, try specifying the parameter `colr = skrown$salt`.
+* Another subtle look is to set `skorcol = skrown$salt` for less contrast between the background and its grid lines.
+
+The axis labels can be a bit verbose, but are mostly similar to plot.default(). I like the extra detail, but if you want to clean it up:
+
+* `labs = 0` removes all axis labels so that you can add your own "in post"
+* `labs = 1` eliminates the de-parsing component, so you get back whatever you put in for `x` and `y`, verbatim.
+
+The y axis label is also enlarged at `cex = 1.05`, which is almost imperceptible (but nice, still). 
+
+* You can revert this by setting `ylab = ""` and adding your own label, manually, if you really need to.
+* Admittedly, if your figure margins or similar graphical parameters are real wonky, the label might not scale accordingly, so consider setting `labs = 0` if your axis labels are giving you grief. 
+
+---
+
+### Simple Plots: Minor customizations 
+
+**Mod 1:** Titles included  
+**Mod 2:** Subtitles  
+**Mod 3:** Plot type changed  
+**Mod 4:** Axis limits modified  
+
+```{r Mods, fig.dim = c(12,18)}
+# Setup
+par(mfrow= c(4,2))
+
+# Vectors to plot
+x <- 1:10
+y <- 10:1
+
+# --- Mod 1
+plot (x, y, main = "Plot Title")
+splot(x, y, main = "Plot Title")
+
+# --- Mod 2
+plot (x, y, main = "Plot Title"); mtext("Plot Subtitle")
+splot(x, y, main = "Plot Title", subb = "Plot Subtitle")
+
+# --- Mod 3
+plot (x, y, main = "Plot Title", type = "l")
+splot(x, y, main = "Plot Title", type = "l")
+
+# --- Mod 4
+plot (x, y, main = "Plot Title", xlim = c(-5,5), ylim = c(5,10))
+splot(x, y, main = "Plot Title", xlim = c(-5,5), ylim = c(5,10))
+```
+
+| Maintained Attributes |
+|:----------------------|
+| spacing of axis limits |
+| Line types. Note that other types ("b", "o", "h", etc.) are all supported by splot() |
+
+| Changes | Description         | How to Revert |
+|:--------|:--------------------|:--------------|
+| Title Size/Colour | Title size is fixed, colour defaults to `skrown$B2`. | `coll = "black`, otherwise, add manually via `mtext` |
+| Title Positioning | Title is raised slightly to make room for subtitle, *iff subtitle is non-empty.* Moreover, the *subtitle* sits higher than the default `mtext()` output. | Add subtitle manually via `mtext()` |
+| Subtitle syntax | Subtitles are called by `splot()` directly, via the parameter `subb` | (omitted by default) |
+
+Changing the value of `coll` will affect all margin text. That is, titles *and* axis labels. If you want to colour these values independently, you may use `mtext()`, OR, my function `slab()`. The latter will preserve all other text attributes as per the `splot()` output.  
+
+
+---
+
+### Plots: More customizations 
+
+**Mod 5:** logarithmic axes 
+**Mod 6:** legends 
+
+```{r}
+# splot(x,y, log = "y")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

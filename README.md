@@ -1,6 +1,5 @@
 # Skye's Toolbox
 
-
 #### Intro
 Hi! Welcome to my toolbox. I really like making things from scratch, and I try to customise the visual components of my work whenever I can. Why? Because I'm a disillusioned PhD student and the flame in my heart has been all but extinguished. I choke on the cloud of apathy which billows from the struggling bed of embers, and now blindly grasp at kindling on my hands and knees. So that's what this toolbox is, really.
 
@@ -49,47 +48,48 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 # Prelim Splot Functions
 
 ### rekt
-**Description:** Creates rectangle over plot region (acts as background colour)
 
-**Parameters:** col (colour); log (warps rectangle to fit logarithmic axes)
-
-**Notes:** Overlays current plot - you will have to replot the data unless rekt() is embedded in splot()
+| | |
+|:-----------------|:---------------------------------------------------------------|
+| **Description:** | Creates rectangle over plot region (acts as background colour) |
+| **Parameters:**  | col (colour); log (warps rectangle to fit logarithmic axes)    |
+| **Notes:**  | Overlays current plot - you will have to replot the data unless rekt() is embedded in splot() |
 
 
 ### sox
-**Description:** Redraws border around plot region
 
-**Parameters:** N/A
-
-**Notes:** Useful for image plots
+| | |
+|:-----------------|:---------------------------------------------------------------|
+| **Description:** |Redraws border around plot region |
+| **Parameters:**  |N/A |
+| **Notes:**       |Useful for image plots |
 
 
 ### skor
-**Description:** Draws faint grid beneath the data: orientation lines similar to ggplot
 
-**Parameters:** {x,y} (indep/dep variables: determines range); {xlim, ylim} (optional, passed through if called for main plot); {n1,n2} (number of lines along x/y); col (colour)
-
-**BUGS:** Skye, consider changing x/y to xlim/ylim somehow. Not currently flexible if user changes lims. 
-
+| | |
+|:-----------------|:---------------------------------------------------------------|
+| **Description:** | Draws faint grid beneath the data: orientation lines similar to ggplot |
+| **Parameters:**  |{x,y} (indep/dep variables: determines range); {xlim, ylim} (optional, passed through if called for main plot); {n1,n2} (number of lines along x/y); col (colour) |
 
 ### slab
-**Description:** Adds Skye-designed labels to existing plot
 
-**Parameters:** main (title); subb (subtitle); xlab (x axis label [duh]), ylab (y axis label); col (colour)
-
-**Notes:** Height ("line") of main title is dependent on whether a subtitle exists.
+| | |
+|:-----------------|:---------------------------------------------------------------|
+| **Description:** | Adds Skye-designed labels to existing plot |
+| **Parameters:**  | main (title); subb (subtitle); xlab (x axis label [duh]), ylab (y axis label); col (colour) |
+| **Notes:**       | Height ("line") of main title is dependent on whether a subtitle exists. |
+|                  | *Needs an argument for adjusting "line" of y axis labels.* |
 
 
 #### rexs (not currently implemented)
-**Description:** Draws a symmetrical pillarbox background
-
-**Parameters:** N (length of x vector); B (combined width of pillars); col (colour)
-
-**Notes:** Designed specifically to highlight boundary regions omitted by sliding window estimates
+| | |
+|:-----------------|:---------------------------------------------------------------|
+| **Description:** | Draws a symmetrical pillarbox background |
+| **Parameters:**  | N (length of x vector); B (combined width of pillars); col (colour) |
+| **Notes:**       | Designed specifically to highlight boundary regions omitted by sliding window estimates |
 
 ---
-
-
 
 # Splot: Skye-Plots
 
@@ -110,9 +110,9 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 | ...       | other graphical parameters                                                                                      |
 
 
-
 ---
 
 ## Skye's wishlist to herself
 
 * legend function... what can I automate? Can I enter a dataframe maybe? Set default colours?
+* add argument for adjustment of **ylab** in slab() and splot().

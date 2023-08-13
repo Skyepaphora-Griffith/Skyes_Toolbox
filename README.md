@@ -1,6 +1,16 @@
-# Palette
+# Skye's Toolbox
 
-## Colour Scheme 1 
+#### Intro
+Hi! Welcome to my toolbox. I really like making things from scratch, and I try to customise and automate the visual components of my work whenever I can. Why? Because I'm a disillusioned PhD student and the flame in my heart has been all but extinguished. I choke on the cloud of apathy which billows from the struggling bed of embers, and now blindly grasp at kindling on my hands and knees. So that's what this toolbox is, really.
+
+But do you want to use these tools too? Cool! I'll try to develop them for the most general user I can. If you play around with any functions I've written, feel free to send me critical feedback at *skye.griffith@queensu.ca*. I'd love to know what screw heads I'm missing. 
+
+#### Notes
+This toolbox is *entirely independent* of ggplot. If you're a ggplotter, leave. I respect you. But this toolbox is made from sticks and stones, not actual legitimate hardware from the store. I *want* splintered, blistery hands. So, if you want to shred some skin with me, you'll have to take off the gg-gloves. 
+
+# Spalette
+
+The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/blob/main/Spalette.Rmd) contains 2 colour schemes, but the second mostly exists for my own archival purposes. The following sub-palettes belong to the *first* colour scheme only.
 
 ### Skastels: pastels
 
@@ -18,7 +28,7 @@
 |:------------|:------------|:------------|:------------|:------------|
 | `#FF6666`![#FF6666](https://placehold.co/15x15/FF6666/FF6666.png) | `"#FFCC33"`![#FFCC33](https://placehold.co/15x15/FFCC33/FFCC33.png) | `"#8FCC52"`![#8FCC52](https://placehold.co/15x15/8FCC52/8FCC52.png) | `"#45B0E6"`![#45B0E6](https://placehold.co/15x15/45B0E6/45B0E6.png) | `"#A15CE6"`![#A15CE6](https://placehold.co/15x15/A15CE6/A15CE6.png) |
 
-#### Skrown: Nudes and Earthy Shades
+### Skrown: Nudes and Earthy Shades
 
 (Hue=33, Sat=22)
 

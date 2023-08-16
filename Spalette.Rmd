@@ -36,12 +36,12 @@ skaturate <- list(red  = "#FF6666",
 
 (Hue=33, Sat=22)
 
-* Lowercase "B" for light browns (background colours, subtle shading, etc.)
+* Lowercase "b" for light browns (background colours, subtle shading, etc.)
 * Uppercase "B" for dark browns (text, plot features, etc.)
 
-| Salt        | Smoke       | b1          | b2          | B1          | B2          |
-|:------------|:------------|:------------|:------------|:------------|:------------|
-| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) |
+| Salt        | Smoke       | b1          | b2          | B1          | B2          | B3          |
+|:------------|:------------|:------------|:------------|:------------|:------------|:------------|
+| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) | `"#322A20"`![#322A20](https://placehold.co/15x15/322A20/322A20.png) |
 
 ```{r}
 skrown <- list(salt = "#FBFAF9",
@@ -49,7 +49,8 @@ skrown <- list(salt = "#FBFAF9",
               b1 = "#EFEBE6",
               b2 = "#DFD7CD",
               B1 = "#897358",
-              B2 = "#574938")
+              B2 = "#574938",
+              B3 = "#322A20")
 ```
 
 
@@ -74,5 +75,5 @@ skol <-  list(red = "#EF8085", orange = "#ee9946", yellow = "#FCD779",
 
 
 ```{r}
-save.image("C:/Users/skyep/Documents/Research/Plot_Animations/spalette.RData")
+save.image("spalette.RData")
 ```

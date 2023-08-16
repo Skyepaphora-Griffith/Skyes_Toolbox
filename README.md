@@ -24,15 +24,15 @@ The file [Spalette.Rmd](https://github.com/Skyepaphora-Griffith/Skyes_Toolbox/bl
 
 ### *Skrown:* Nudes and Earthy Shades
 
-| Salt        | Smoke       | b1          | b2          | B1          | B2          |
-|:------------|:------------|:------------|:------------|:------------|:------------|
-| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) |
+| Salt        | Smoke       | b1          | b2          | B1          | B2          | B3          |
+|:------------|:------------|:------------|:------------|:------------|:------------|:------------|
+| `#FBFAF9`![#FBFAF9](https://placehold.co/15x15/FBFAF9/FBFAF9.png) | `"#F7F5F3"`![#F7F5F3](https://placehold.co/15x15/F7F5F3/F7F5F3.png) | `"#EFEBE6"`![#EFEBE6](https://placehold.co/15x15/EFEBE6/EFEBE6.png) | `"#DFD7CD"`![#DFD7CD](https://placehold.co/15x15/DFD7CD/DFD7CD.png) | `"#897358"`![#897358](https://placehold.co/15x15/897358/897358.png) | `"#574938"`![#574938](https://placehold.co/15x15/574938/574938.png) | `"#322A20"`![#322A20](https://placehold.co/15x15/322A20/322A20.png) |
 
 >(Hue=33, Sat=22)
 >
 >**"b"** for light browns (background colours, subtle shading, etc.)
 >
->**"B"** for dark browns (text, plot features, etc.)
+>**"B"** for dark browns (text, foreground plot features, etc.)
 
 ### *Skastels:* pastels
 

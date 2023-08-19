@@ -74,7 +74,7 @@ splot <- function(x, y = NULL,
                   xlim = NULL, ylim = NULL,
                   skor = TRUE, n1 = 11, n2 = 9, skorcol = "white",
                   log  = "",
-                  labs = 2, las = 1, coll = skrown$B3, ...){
+                  labs = 1, las = 1, coll = skrown$B3, ...){
   # frame
   plot(x, y, xlab = "", ylab = "", las = las,
        xlim = xlim, ylim = ylim, log = log, ...)

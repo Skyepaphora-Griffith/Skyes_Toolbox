@@ -23,7 +23,7 @@ Note: this file also includes *Spalette* colour schemes. To use the Spalette pal
 
 blablabla
 
-### Simple, Simple Plots: little to no customization
+### Default Plots
 
 **Basic 1:** y vector left NULL  
 **Basic 2:** x and y vectors given  
@@ -81,34 +81,30 @@ The y axis label is also enlarged at `cex = 1.05`, which is almost imperceptible
 
 ### Simple Plots: Minor customizations 
 
-**Mod 1:** Titles included  
-**Mod 2:** Subtitles  
-**Mod 3:** Plot type changed  
-**Mod 4:** Axis limits modified  
+**Mod 1:** Titles and subtitles included  
+**Mod 2:** Plot type changed  
+**Mod 3:** Axis limits modified
 
-```{r Mods, fig.dim = c(12,18)}
+```{r Mods, fig.dim = c(12,15)}
 # Setup
-par(mfrow= c(4,2))
+par(mfrow= c(3,2))
 
 # Vectors to plot
-x <- 1:10
-y <- 10:1
+x  <- (-10):10
+y1 <- x^2
+y2 <- (x^2)/4
 
 # --- Mod 1
-plot (x, y, main = "Plot Title")
-splot(x, y, main = "Plot Title")
+plot (x, y1, main = "Plot Title"); mtext("Plot Subtitle")
+splot(x, y1, main = "Plot Title", subb = "Plot Subtitle")
 
 # --- Mod 2
-plot (x, y, main = "Plot Title"); mtext("Plot Subtitle")
-splot(x, y, main = "Plot Title", subb = "Plot Subtitle")
-
-# --- Mod 3
 plot (x, y, main = "Plot Title", type = "l")
 splot(x, y, main = "Plot Title", type = "l")
 
-# --- Mod 4
-plot (x, y, main = "Plot Title", xlim = c(-5,5), ylim = c(5,10))
-splot(x, y, main = "Plot Title", xlim = c(-5,5), ylim = c(5,10))
+# --- Mod 3
+plot (x, y, main = "Plot Title", xlim = c(0,5), ylim = c(0,30))
+splot(x, y, main = "Plot Title", xlim = c(0,5), ylim = c(0,30))
 ```
 
 | Maintained Attributes |
@@ -118,17 +114,18 @@ splot(x, y, main = "Plot Title", xlim = c(-5,5), ylim = c(5,10))
 
 | Changes | Description         | How to Revert |
 |:--------|:--------------------|:--------------|
-| Title Size/Colour | Title size is fixed, colour defaults to `skrown$B2`. | `coll = "black`, otherwise, add manually via `mtext` |
+| Title Size/Colour | Title size is fixed, colour defaults to `skrown$B2`. | `coll = "black`. For spacing, add manually via `mtext` |
 | Title Positioning | Title is raised slightly to make room for subtitle, *iff subtitle is non-empty.* Moreover, the *subtitle* sits higher than the default `mtext()` output. | Add subtitle manually via `mtext()` |
 | Subtitle syntax | Subtitles are called by `splot()` directly, via the parameter `subb` | (omitted by default) |
 
-Changing the value of `coll` will affect all margin text. That is, titles *and* axis labels. If you want to colour these values independently, you may use `mtext()`, OR, my function `slab()`. The latter will preserve all other text attributes as per the `splot()` output.  
+Changing the value of `coll` will affect all margin text. That is, titles *and* axis labels. If you want to colour these values independently, you may use `mtext()`, OR, multiple calls of my function `slab()`. The latter will preserve all other text attributes as per the `splot()` output.  
 
 
 ---
 
 ### Plots: More customizations 
 
+**Mod 4:** multiple functions on one plot
 **Mod 5:** logarithmic axes 
 **Mod 6:** legends 
 

@@ -4,7 +4,7 @@ output: html_document
 
 ```{r}
 # Load Palette
-load(file = "C:/Users/skyep/Documents/Research/Plot_Animations/spalette.RData")
+load(file = "C:/Users/skyep/Documents/Research/Skyes_Toolbox/spalette.RData")
 ```
 
 # Prelim Functions
@@ -189,7 +189,7 @@ splot <- function(x, y = NULL,
 # SAVE
 
 ```{r}
-save.image("~/Research/Plot_Animations/splot.RData")
+save.image("~/Research/Skyes_Toolbox/splot.RData")
 ```
 
 ---

@@ -1,4 +1,4 @@
-# Hotkeys
+# Hotkeys!
 
 > All scripts are run using the (free) program **Autohotkey V2.0:** 
 >

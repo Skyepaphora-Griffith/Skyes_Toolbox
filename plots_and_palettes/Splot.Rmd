@@ -9,6 +9,10 @@ load(file = "C:/Users/skyep/Documents/Research/Skyes_Toolbox/spalette.RData")
 
 # Prelim Functions
 
+$$
+\left(\sum \text{example latex blablabla}\right)
+$$
+
 ```{r prelim}
 
 # --- Rectangle --- #

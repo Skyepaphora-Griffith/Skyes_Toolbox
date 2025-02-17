@@ -4,7 +4,7 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force
 SetKeyDelay, 0
-^+t::
+^+u::
 Send,
 (
 {Raw}git status
